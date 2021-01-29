@@ -1,5 +1,7 @@
 # CofradeTycoon
-
+# Definicion del Proyecto
+Cofradetycoon es un juego de gestion basado en las cofradias el usuario se registrara y creara una Hermandad comprando los titulares y realizando sus cultos, cada dia de la Semana
+sera una fecha en el Juego siendo Domingo (Verano) Lunes (Otoño) Miercoles (Navidad) Jueves (Cuaresma) Viernes (Semana Santa) y Sabado (Corpus Christy) Los Viernes se realizara la estancion de penitencia, el usuario comenzara procesionando en visperas y cuando obtenga un nivel de prestigio suficiente podra incoporarse a la Jornada que prefiera, los pasos se podran ir mejorando conforme creces al igual que podras comprar mejores enseres, tambien podras contratar una banda de musica para tus pasos e incluso crear tu propia banda
 # Funciones y Requisitos
 
 1-El Usuario creara una hermandad que empezara como Hermandad de Vispera y cuando alcance cierto nivel
