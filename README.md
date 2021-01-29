@@ -1,6 +1,6 @@
 # CofradeTycoon
 
-Funciones y Requisitos
+# Funciones y Requisitos
 
 1-El Usuario creara una hermandad que empezara como Hermandad de Vispera y cuando alcance cierto nivel
 se incorporara a la nomina de la Semana Santa pudiendo elegir el dia de salida
@@ -15,3 +15,6 @@ con poca fama y mucho nivel simulando a la vida real, tambien se podra crear una
 
 
 4-Habra una tienda dentro del Juego para comprar los enseres,pasos y figurar secundarias
+
+# Enlace de Trello
+https://trello.com/b/8rvQR1Ds/cofradetycoon
