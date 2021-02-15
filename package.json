@@ -1,38 +1,48 @@
 {
-  "name": "cofrade-tycoom",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.7.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.2",
-    "web-vitals": "^1.1.0"
-  },
+  "name": "lerna-mern",
+  "version": "1.0.0",
+  "description": "MERN App in monorepository using Lerna",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --ignore-path .gitignore .",
+    "postinstall": "lerna bootstrap",
+    "purge": "npm run clear:test && npm run clear:locks && npm run clear:modules",
+    "compose:tools": "docker-compose -f docker/docker-compose.tools.yml up -d",
+    "compose:tools:down": "docker-compose -f docker/docker-compose.tools.yml down",
+    "build": "lerna run build --parallel",
+    "deploy": "lerna run deploy --parallel",
+    "dev": "lerna run start --parallel",
+    "start": "npm run build && npm run deploy"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabrirf/lerna-mern.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [
+    "node",
+    "nodejs",
+    "react",
+    "reactjs",
+    "mongodb",
+    "api",
+    "rest",
+    "express",
+    "lerna"
+  ],
+  "author": "Gabriel Rodríguez Flores <gabrirf.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gabrirf/lerna-mern/issues"
+  },
+  "homepage": "https://github.com/Gabrirf/lerna-mern#readme",
+  "dependencies": {
+    "lerna": "^3.22.1",
+    "luxon": "^1.26.0",
+    "mongodb": "^3.6.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
   }
 }

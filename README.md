@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# CofradeTycoon
+# Definicion del Proyecto
+Cofradetycoon es un juego de gestion basado en las cofradias el usuario se registrara y creara una Hermandad comprando los titulares y realizando sus cultos, cada dia de la Semana
+sera una fecha en el Juego siendo Domingo (Verano) Lunes (Otoño) Miercoles (Navidad) Jueves (Cuaresma) Viernes (Semana Santa) y Sabado (Corpus Christy) Los Viernes se realizara la estancion de penitencia, el usuario comenzara procesionando en visperas y cuando obtenga un nivel de prestigio suficiente podra incoporarse a la Jornada que prefiera, los pasos se podran ir mejorando conforme creces al igual que podras comprar mejores enseres, tambien podras contratar una banda de musica para tus pasos e incluso crear tu propia banda
+# Funciones y Requisitos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1-El Usuario creara una hermandad que empezara como Hermandad de Vispera y cuando alcance cierto nivel
+se incorporara a la nomina de la Semana Santa pudiendo elegir el dia de salida
 
-## Available Scripts
+2-El Calendario del juego sera segun el dia de de la Semana siendo el Jueves Cuaresma y el Viernes Semana Santa
+Las hermandades tendran que celebrar sus cultos segun sus normas en la fecha prevista (a elegir por el usuario) si se hacen
+en la fecha elegida una cantidad de fama y devocion, si los hace despues de la fecha prevista el usuario ganara fama y devocion pero solo la
+mitad
 
-In the project directory, you can run:
+3-El usuario podra contratar bandas para sus pasos segun el nivel musical y la fama tendran un precio acorde habra bandas con mucha fama pero poco nivel o bandas
+con poca fama y mucho nivel simulando a la vida real, tambien se podra crear una banda para la hermandad y realizar conciertos para aumentar el nivel, la fama solo aumentaria cuando salgan en Semana Santa
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4-Habra una tienda dentro del Juego para comprar los enseres,pasos y figurar secundarias
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Enlace de Trello
+https://trello.com/b/8rvQR1Ds/cofradetycoon
