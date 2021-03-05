@@ -1,5 +1,4 @@
-const mongodbService = require('./mongodb');
+module.exports={
 
-module.exports = {
-  mongodbService,
-};
+}
+

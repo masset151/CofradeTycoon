@@ -22,6 +22,7 @@ const config = {
       useNewUrlParser: true,
     },
   },
+  SECRET_TOKEN:'clavetoken',
 };
 
 module.exports = config;

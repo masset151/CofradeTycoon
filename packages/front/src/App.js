@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import Registro from "./registro";
+import Login from "./login";
+import fecha from "./fecha";
+import { Route, NavLink, BrowserRouter } from "react-router-dom";
+import ReactDOM, { render } from "react-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class Main extends React.Component {
+  render() {
+    return (
+      
+      <BrowserRouter>
+        <div>
+          <ul className="header">
+            <li>
+              <NavLink to="/registro">Registro</NavLink>
+            </li>
+            <li>
+            <NavLink to="/login">login</NavLink>
+            </li>
+          </ul>
+          <div className="content">
+            <Route path="/registro" component={Registro} />
+            <Route path="/login" component={Login} />
+          </div>
+        </div>
+      </BrowserRouter>
+      
+    );
+  }
+
+  
 }
 
-export default App;
+
+export default Main;
