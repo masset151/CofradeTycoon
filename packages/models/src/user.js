@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const bcrypt = require('bcrypt-nodejs')
 
 const { uniqueNotNullString } = require('./utils/types');
 const { cleanObject } = require('./utils/format');
@@ -13,10 +14,8 @@ const settingsSchema = Schema({
 const userSchema = new Schema({
   userName: { type: String, required: true, unique: true },
   realName: uniqueNotNullString('realName'),
-  birth: Date,
-  password: String,
-  settings: settingsSchema,
-  image: { data: Buffer, contentType: String },
+  email: { type: String, unique:true},
+  password: {type:String, select:false},
 });
 
 userSchema.method('toJSON', cleanObject);
