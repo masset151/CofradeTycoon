@@ -30,26 +30,59 @@ function signUp(req, res) {
 
 
 function signIn(req, res) {
-    User.find({ email: req.body.email }, (err, user) => {
+    //const {email,password} = req.body
+   /*
+    console.log("En signIn")
+    console.log({email: req.body.email})
+    console.log("ahora toca Fin")
+    User.find({email: req.body.email}),(err,user) =>{
+        console.log("Buscando Usuario")
+        if(err){
+            console.log(err)
+            console.log("Error")
+            return res.status(500).send({message: err})
+        }else if(!user){
+            return res.status(500).send({message: "No existe el usuario"})
+            console.log("Usuario Encontrado")
+        }else{
+            user.isCorrectPassword(password, (err,result) => {
+                if(err){
+                    return res.status(500).send({message: "Error en la Auntenticacion"})
+                }else if(result){
+                    res.status(200).send('Usuario Aunteticado')
+                    console.log("Usuario Encontrado")
+                }
+            });
+        }
+        
+    }
+    */
+    User.findOne({ email: req.body.email,password:req.body.password }, (err, User) => {
+        
         if (err) return res.status(500).send({
             message: err
         })
         if (!User) return res.status(404).send({
             message: "No existe el usuario"
-        })
+        }
+            
+        )
 
         console.log("En signIn")
-        req.user = user
+        req.user = User
         res.status(200).send({
             message: "Te has logueado correctamente",
-            token: services.createToken(user)
+            token: services.createToken(User)
 
 
 
         })
-
+        console.log("Logueado");
+        console.log(User);
 
     })
+
+    
 }
 
 

@@ -9,12 +9,7 @@ const layout = {
     wrapperCol: { span: 12 },
 };
 
-const validarMensajes = {
-    required: '${label} es requerido',
-    types: {
-        email: '${label} el email introducido no es valido',
-    },
-};
+
 
 
 async function postServidor(data) {
@@ -29,9 +24,12 @@ async function postServidor(data) {
         body: JSON.stringify(data)
     };
 
+    console.log("peticion enviada")
+    console.log(url)
     const response = await fetch(url, opcion);
+    console.log(response,"response AMR")
     const json = await response.json();
-    console.log(response)
+    //console.log(response)
     return json;
     
 }
@@ -66,6 +64,12 @@ const Login= () => {
 
 };
 
+const validarMensajes = {
+    required: `${label} es requerido`,
+    types: {
+        email: `${label} el email introducido no es valido`,
+    },
+};
 
 
 export default Login;
