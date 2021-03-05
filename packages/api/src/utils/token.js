@@ -16,7 +16,7 @@ function createToken(user){
     
   }
 
-
+  //res.redirect('login')
   jwt.encode(payload, config.SECRET_TOKEN)
 }
 

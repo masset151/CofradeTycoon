@@ -1,5 +1,6 @@
 import { Form, Input, Button, Select, DatePicker } from 'antd';
 import { render } from 'react-dom';
+import { Redirect } from 'react-router';
 
 
 const { Options } = Select;
@@ -14,7 +15,7 @@ const layout = {
 
 async function postServidor(data) {
     const port = window.location.port ? `:${parseInt(window.location.port) + 1}` : '';
-    const url = `http://localhost:3001/api/v1/login`;
+    const url = `${window.location.protocol}//${window.location.hostname}${port}/api/v1/login`;
     const opcion = {
         method: 'POST',
         headers: {
@@ -30,13 +31,14 @@ async function postServidor(data) {
     console.log(response,"response AMR")
     const json = await response.json();
     //console.log(response)
+    
     return json;
+    
     
 }
 
 const Login= () => {
-
-
+    
     const onFinish = values => {
         postServidor(values)
         console.log(values,"Estas Dentro")

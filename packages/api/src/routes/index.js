@@ -12,6 +12,7 @@ router.use('/users', users);
 
 //router.post('/registro', UsersCTRO.signUp)
 //api.post('/login',UsersCTRO.signIn)
+
 router.get('/private', auth.isAuth, function (req, res) {
     res.status(200).send({ message: 'acceso autorizado' })
 })

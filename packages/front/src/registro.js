@@ -1,5 +1,6 @@
 import { Form, Input, Button, Select, DatePicker } from 'antd';
 import { render } from 'react-dom';
+import { Redirect } from 'react-router'
 
 
 const { Options } = Select;
@@ -16,7 +17,7 @@ const config = {
 
 async function postServidor(data) {
     const port = window.location.port ? `:${parseInt(window.location.port)+1}` : '';
-    const url = `http://localhost:3001/api/v1/registro`;
+    const url = `${window.location.protocol}//${window.location.hostname}${port}/api/v1/registro`;
     const opcion = {
         method: 'POST',
         headers: {
@@ -29,7 +30,9 @@ async function postServidor(data) {
     const response = await fetch(url, opcion);
     const json = await response.json();
     return json;
-    console.log(response)
+    console.log(response);
+     
+    
 }
 
 const Registro = () => {
