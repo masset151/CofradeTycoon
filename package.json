@@ -12,7 +12,8 @@
     "build": "lerna run build --parallel",
     "deploy": "lerna run deploy --parallel",
     "dev": "lerna run start --parallel",
-    "start": "npm run build && npm run deploy"
+    "postinstall": "npm run build",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
