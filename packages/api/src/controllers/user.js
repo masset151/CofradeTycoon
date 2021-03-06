@@ -1,7 +1,6 @@
 const services = require('../utils/token');
 const { User } = require('models');
 const multer = require('multer');
-import { Redirect } from 'react-router'
 
 
 
