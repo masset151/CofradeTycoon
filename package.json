@@ -13,7 +13,7 @@
     "deploy": "lerna run deploy --parallel",
     "dev": "lerna run start --parallel",
     "postinstall": "npm run build",
-    "start": "node server.js"
+    "start": "npm run deploy"
   },
   "repository": {
     "type": "git",
